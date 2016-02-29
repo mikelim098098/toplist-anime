@@ -5,7 +5,7 @@ class model extends CI_Model
 {
   public function g_animes(){
     $query =
-      "SELECT animes.id, status, title, description, release_year, total_episodes, anime_id, user_id, likes,
+      "SELECT Animes.id, status, title, description, release_year, total_episodes, anime_id, user_id, likes,
       SUM(IF(likes = 1, 1,0)) AS 'likes'
       FROM Animes
       LEFT JOIN Animelikes ON Animes.id = Animelikes.anime_id
